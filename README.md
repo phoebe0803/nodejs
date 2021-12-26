@@ -58,7 +58,7 @@ http://127.0.0.1:7001/GET/notes
 ```
 {"success":true,"message":"OK","data":"[{\"id\":6,\"msg\":\"\\\"完成监测预警项目优化\\\"\",\"finish_status\":0,\"time\":\"1640496728562\"},{\"id\":5,\"msg\":\"\\\"今天6点要去看牙医\\\"\",\"finish_status\":0,\"time\":\"1640496707078\"},{\"id\":4,\"msg\":\"\\\"今天6点要去看牙医\\\"\",\"finish_status\":0,\"time\":\"1640496704990\"},{\"id\":3,\"msg\":\"\\\"今天6点要去看牙医\\\"\",\"finish_status\":0,\"time\":\"1640496612224\"},{\"id\":2,\"msg\":\"kkkk\",\"finish_status\":1,\"time\":\"1640489417758\"}]","code":200}
 ```
-## 展示我的todo list （没完成/或者没完成，按时间排序）
+## 展示我的todo list （修改完成状态：标记没完成/完成，按时间排序）
 ### 接口url：
 ```
 http://127.0.0.1:7001/GET/notes/finished?finish=1
@@ -77,8 +77,8 @@ http://127.0.0.1:7001/GET/notes/finished?finish=1
 ```
 ## 更新修改todo list（更新标记完成状态，更新文本内容）
 ### 接口url：
-http://172.20.10.9:7001/PUT/notes?id=3&msg="明天早上7点出门看牙医"&finish=0
-http://172.20.10.9:7001/PUT/notes?id=6&finish=1
+- http://172.20.10.9:7001/PUT/notes?id=3&msg="明天早上7点出门看牙医"&finish=0
+- http://172.20.10.9:7001/PUT/notes?id=6&finish=1
 ### 传入参数：
 ```
 {
