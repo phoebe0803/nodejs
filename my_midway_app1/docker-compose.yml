@@ -1,0 +1,7 @@
+version: "3"
+services:
+  midway:
+    build: .
+    image: lidan2/docker-midway # dockerhub的用户名:镜像的名字
+    ports:
+      - "7002:7002" # 宿主机端口:容器端口 把7001发布出来
