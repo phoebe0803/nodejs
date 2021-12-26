@@ -1,7 +1,7 @@
-#数据库
+# 数据库
 使用的是mysql
 配置的文件在my_midway_app1/src/config/config.default.ts
-#运行
+# 运行
 ```
 npm run dev
 ```
