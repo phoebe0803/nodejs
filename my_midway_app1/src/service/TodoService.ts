@@ -38,7 +38,6 @@ export class TodoService {
   }
   //delete
   async deleteTodo(id){
-    console.log("delete");
     const re = await this.todoNotes.delete(id);
     if (re.affected == 0){
       return {success: false, message: 'erro',id:id ,code:400}
@@ -49,7 +48,6 @@ export class TodoService {
   }
   //fix
   async fixTodo(id,msg,finish){
-    console.log("ewre")
     // // save entity
     let note = await this.todoNotes.findOne(id);
     if (!note) {
@@ -69,7 +67,6 @@ export class TodoService {
 
   // save
   async saveTodo(msg,finish) {
-    console.log("1231231")
     let todo = new Notes();
     todo.msg = msg;
     todo.finish_status = finish;
