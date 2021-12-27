@@ -11,8 +11,6 @@ export class APIController {
   //创建todo list
   @Get('/POST/notes')
   async addNote(@Query() msg: string,@Query() finish: number) {
-    // const msg =msg;
-    // const finish = note.finish_status;
     const data = await this.todoService.saveTodo(msg,finish);
     return {data:JSON.stringify(data)};
   }
@@ -37,7 +35,6 @@ export class APIController {
   //展示我的所有todolist完成或者没完成
   @Get('/GET/notes/finished/')
   async getNoteStatus(@Query() finish: number) {
-    // // const msg =msg;
     const data = await this.todoService.getTodoStatus(finish);
     return {data:JSON.stringify(data)};
     }
